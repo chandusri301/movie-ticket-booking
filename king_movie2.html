@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>www.movie mahal.com</title>
+<link rel = "icon" href =  
+"C:\Users\chand\Downloads\logo_transparent.png"
+        type = "image/x-icon"> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+background-image: url("logo_transparent.png");
+  background-color: #cccccc;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+.navbar .search-container {
+  float: right;
+}
+
+.navbar  input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.navbar  .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
+}
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.example{
+background-image:C:\Users\chand\Downloads\logo_transparent.png;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+
+</head>
+<body>
+
+
+
+<div class="navbar">
+  <a href="king_movie2.html" class="active"><img src="C:\Users\chand\Downloads\home-5-512.png" width="30px" height="30px"></a>
+  <a href="html.html" class="right">about</a>
+  <a href="contact-DESKTOP-61P1I1I.html" class="right">contact us</a>
+  <a href="signin.html" class="right">log in</a>
+<div class="search-container">
+    <form action="king_movie2.html">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit">submit</button>
+    </form>
+  </div>
+ 
+</div><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <center><img src="C:\Users\chand\Downloads\my allu.jpg" width="60%" height="60%"></center>
+  <div class="text">telugu</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <center><img src="C:\Users\chand\Downloads\wallpaperflare.com_wallpaper.jpg" width="60%" height="70%"></center>
+  <div class="text">hindi</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<center>  <img src="C:\Users\chand\Downloads\rajani.jpg" width="40%" height="40%"></center>
+  <div class="text">tamil</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+ <center>   <h2>Telugu movies</h2></center>
+ 
+<div class="row">
+  <div class="column">
+ <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\my allu.jpg" alt="naa peru surya" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Ala vaikuntapuramulo</center></p>
+  </div>
+  <div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\Sarileru_Neekevaru_Movie_First_Look1.jpg" alt="sarileru neekavaru" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Sarileru neekavaru</center></p>
+  </div>
+  <div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\Bheeshma_Movie_Posters5.jpg" alt="Bheeshma" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Bheeshma</center></p>
+  </div>
+<div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\Chiranjeevi_Sye_Raa_Narasimha_Reddy_First_Look_Posters3.jpg" alt="Sye Raa Narasimha Reddy" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Sye Raa Narasimha Reddy</center></p>
+  </div>
+<div class="column">
+   <a href="ticket1.html">  <img src="C:\Users\chand\Downloads\venky_mama_movie_posters1.jpg" alt="venky mama" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Venky mama</center></p>
+  </div>
+<div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\Aham_Brahmasmi_First_Look_Poster1.jpg" alt="Aham Brahmasmi" width="400px" height="250px"></a><p style="font-family:Impact;"><center>Aham Brahmasmi</center></p>
+  </div>
+</div>
+  <center>  <h2>Hindi movies</h2></center>
+<div class="row">
+  <div class="column">
+ <a href="ticket1.html"> <img src="C:\Users\chand\Downloads\wallpaperflare.com_wallpaper.jpg"  width="400px" height="250px"></a><p><center>Dangal</center></p>
+</div>
+  <div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\street dancer.jpg"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Street dancer 3</center></p>
+</div>
+  <div class="column">
+    <a href="ticket1.html"> <img src="C:\Users\chand\Downloads\chacapak.jpg"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Chhapaak</center></p>
+  </div>
+ <div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\baagi.jfif"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Baagi 3</center></p>
+  </div>
+ <div class="column">
+     <a href="ticket1.html"><img src="C:\Users\chand\Downloads\thanji.jfif"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Tanhaji</center></p>
+  </div>
+ <div class="column">
+ <a href="ticket1.html">    <img src="C:\Users\chand\Downloads\kabir.png"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Kabir singh</center></p>
+  </div>
+</div>
+  <center>  <h2>Tamil movies</h2></center>
+<div class="row">
+  <div class="column">
+  <a href="ticket1.html"><img src="C:\Users\chand\Downloads\rajani.jpg"  width="400px" height="250px"></a><p><center>Darbar</center></p>
+</div>
+  <div class="column">
+   <a href="ticket1.html">  <img src="C:\Users\chand\Downloads\valimai.jpg"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Valimai</center></p>
+</div>
+  <div class="column">
+    <a href="ticket1.html"> <img src="C:\Users\chand\Downloads\hero.jfif"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Hero</center></p>
+  </div>
+ <div class="column">
+  <a href="ticket1.html">   <img src="C:\Users\chand\Downloads\master.jfif"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Master</center></p>
+  </div>
+ <div class="column">
+   <a href="ticket1.html">  <img src="C:\Users\chand\Downloads\natpa.jpg"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Natpa thunai</center></p>
+  </div>
+ <div class="column">
+    <a href="ticket1.html"> <img src="C:\Users\chand\Downloads\llr.jfif"  width="400px" height="250px"></a><p style="font-family:Impact;"><center>Dharala prabhu</center></p>
+  </div>
+</div>
+<div class="footer">
+<ul style="list-style:none; padding:0px; line-height:24px;">
+                    <li><a href="html.html" style="color:black;">About</a></li>
+                    <li><a href="contact-DESKTOP-61P1I1I.html" style="color:black;">Contact</a></li>
+                     </ul>
+  <p>copyright &copy;www.movie mahal.com</p>
+  
+</div>
+
+</body>
+</html>

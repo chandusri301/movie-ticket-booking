@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] , input[type=number], input[type=date]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=date]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.mn{
+ width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+onclick:"document.location = 'payment.html'";
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<script>
+var stateObject = {
+"Tamil nadu": { "chennai": ["escape cinemas", "vetri cinemas","palazzo cinemas"],
+"coimbatore": ["senthial kumaran theatres", "central theatres","KG cinemas"],
+"tirchy": ["LA cinemas", "sona mina theatres","palace theaters"],
+},
+"Andhra pradesh": {
+"vijayawada": ["srinivasa theatres", "ram gopal theaters"],
+"visakapatinam": ["melody theatres", "kameswari","gokul"],
+"tirupathi": ["pratap movie theater", "CS cinemas"],
+
+}, 
+"Karnataka": {
+"mangalore": ["PVR theater", "cine poles"],
+"banglore": ["ganesh", "everst cinemas"]
+},
+"Kerala": {
+"kochin": ["padama cinemas", "Q cinemas "],
+"Alapey": ["sita movies", "PAN cinemas"]
+},
+"Telangana": {
+"hydrabad": ["prasad's multiplex", "PVR cinemas"],
+"karimnagar": ["asain cinemas", "shiva cinemas"],
+"rangareddy": ["PG movies", "PVR cinemas"]
+},
+"Delhi": {
+"chanakayapuri": ["PVR", "PVR X"],
+"shahdara": ["Q"],
+"karawal nagar": ["satyam", "movie magic"]
+},
+"Maharastra": {
+"mumbai": ["prathvi", "sterling","cineplex"],
+"pune": ["victory", "nelayam"],
+"nagpur": ["sangam", "carnival"]
+},
+"Punjab": {
+"ludhiana": ["SRS cinemas", "orient cinemas"],
+"jalandhar": ["sarb multiplex", "laxmi cinemas"],
+"amristar": ["INOX multiplex", "PVR"]
+},
+}
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
+</head>
+<body>
+
+<form >
+  <div class="container">
+    <h1>Booking</h1>
+    <p>Please fill in this form to book the ticket.</p>
+    <hr>
+
+    <label for="first name"><b>First name</b></label>
+    <input type="text" placeholder="Enter first name" name="first name" required>
+   <label for="last name"><b>Last name</b></label>
+    <input type="text" placeholder="Enter last name" name="last name" required>
+
+ <label for="number of tickets"><b>Number of tickets</b></label>
+    <input type="number" placeholder="Enter number of tickets" name="number of tickets" required>
+
+<label  ><b>Choose state</b></label>
+<div class="mn">
+    <select name="state" id="countySel" size="1">
+<option value="" selected="selected">Select state</option>
+</select>
+<br>
+</div>
+<label  ><b>Choose city</b></label>
+<div class="mn">
+ <select name="countrya" id="stateSel" size="1">
+<option value="" selected="selected">Please select state first</option>
+</select>
+<br>
+</div>
+<label  ><b>Choose theater</b></label>
+<div class="mn">
+<select name="theater" id="districtSel" size="1">
+<option value="" selected="selected">Please select city first</option>
+</select><br>
+</div>
+    <label for="enter date"><b>Enter date<b></label>
+  <input type="date" placeholder="Enter date" name="enter date">
+
+<label for="cars" >Choose timing</label>
+<div class="mn">
+<select id="cars">
+  <option value="09:00 AM">09:00 AM</option>
+  <option value="02:22 PM">02:00 PM</option>
+  <option value="06:00 PM">06:00PM</option>
+  <option value="09:00 PM">09:00 PM</option>
+</select>
+</div>
+  <button type="submit" class="registerbtn" onclick="document.location = 'payment.html'">  payment</button>
+  </div>
+  
+
+</form>
+
+</body>
+</html>
